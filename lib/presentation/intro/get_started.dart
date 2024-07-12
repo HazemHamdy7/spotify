@@ -5,8 +5,8 @@ import 'package:spotify/core/configs/assets/app_assets.dart';
 import 'package:spotify/core/configs/assets/app_vector.dart';
 import 'package:spotify/core/configs/theme/app_colors.dart';
 
-import '../../common/basic_app_button.dart';
-import '../choose_mode/choose_mode.dart';
+import '../../common/widgets/button/basic_app_button.dart';
+import '../choose_mode/page/choose_mode.dart';
 
 class GetStarted extends StatefulWidget {
   const GetStarted({super.key});

@@ -4,9 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:spotify/core/configs/theme/app_colors.dart';
 import 'package:spotify/presentation/choose_mode/bloc/theme_cubit.dart';
-import '../../common/basic_app_button.dart';
-import '../../core/configs/assets/app_assets.dart';
-import '../../core/configs/assets/app_vector.dart';
+import '../../../common/widgets/button/basic_app_button.dart';
+import '../../../core/configs/assets/app_assets.dart';
+import '../../../core/configs/assets/app_vector.dart';
+import '../../auth/pages/singup_or_signin.dart';
 
 class ChooseModePage extends StatelessWidget {
   const ChooseModePage({super.key});
@@ -126,10 +127,10 @@ class ChooseModePage extends StatelessWidget {
               BasicAppButton(
                 title: 'Continue',
                 onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => const ChooseModePage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SingupOrSigninPage()));
                 },
               ),
             ],
