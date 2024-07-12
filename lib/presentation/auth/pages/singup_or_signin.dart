@@ -7,6 +7,7 @@ import 'package:spotify/core/configs/theme/app_colors.dart';
 import '../../../common/widgets/appbar/app_bar.dart';
 import '../../../common/widgets/button/basic_app_button.dart';
 import '../../../core/configs/assets/app_vector.dart';
+import 'singup.dart';
 
 class SingupOrSigninPage extends StatelessWidget {
   const SingupOrSigninPage({super.key});
@@ -38,7 +39,7 @@ class SingupOrSigninPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset(AppVector.logo),
-                const SizedBox(height: 30),
+                const SizedBox(height: 50),
                 const Text(
                   'Enjoy listening to music',
                   style: TextStyle(
@@ -61,7 +62,13 @@ class SingupOrSigninPage extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: BasicAppButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Singup(),
+                              ));
+                        },
                         title: 'Register',
                       ),
                     ),
